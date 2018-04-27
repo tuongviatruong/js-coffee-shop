@@ -63,13 +63,24 @@
 
 
     function makeCoffee(){
-        setTimeout(coffeeImage.setAttribute('src', "static/coffee_machine.jpg"), 1500);
-        // setTimeout(coffeeImage.setAttribute('src', "static/coffee_mug.jpg"), 2500);
-        // coffeeImage.setAttribute('src', "static/coffee_beans.jpg");
+        coffeeImage.setAttribute('src', "static/coffee_machine.jpg");
+        setTimeout(coffeeMug,1500);
+        setTimeout(coffeeBean,3500);
 
     }
 
-    coffeeImage.addEventListener('click', makeCoffee)
+    function coffeeMug(){
+        (coffeeImage.setAttribute('src', "static/coffee_mug.jpg"));
+    }
+
+    function coffeeBean(){
+
+        coffeeImage.setAttribute('src', "static/coffee_beans.jpg");
+    }
+
+    coffeeImage.addEventListener('click', makeCoffee);
+    
+    
 
 </script>
 
